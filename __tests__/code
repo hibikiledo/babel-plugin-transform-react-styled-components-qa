@@ -29,3 +29,18 @@ const Component6 = styled[tag].attrs({
   width: 12px;
   border-bottom: ${props => (props.underlined ? "1px solid" : none)};
 `;
+
+// without attrs ( style another component )
+const Component7 = styled(Component)`
+  width: 12px;
+  border-bottom: ${props => (props.underlined ? "1px solid" : none)};
+`;
+
+// without attrs ( style another component )
+const Component8 = styled(Component).attrs({
+  underlined: true,
+  accentColor: "blue"
+})`
+  width: 12px;
+  border-bottom: ${props => (props.underlined ? "1px solid" : none)};
+`;

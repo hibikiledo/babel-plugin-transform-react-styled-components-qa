@@ -39,5 +39,23 @@ const Component6 = styled[tag].attrs({
 })\`
   width: 12px;
   border-bottom: \${props => props.underlined ? \\"1px solid\\" : none};
+\`;
+
+// without attrs ( style another component )
+const Component7 = styled(Component).attrs({
+  \\"data-qa\\": \\"Component7\\"
+})\`
+  width: 12px;
+  border-bottom: \${props => props.underlined ? \\"1px solid\\" : none};
+\`;
+
+// without attrs ( style another component )
+const Component8 = styled(Component).attrs({
+  underlined: true,
+  accentColor: \\"blue\\",
+  \\"data-qa\\": \\"Component8\\"
+})\`
+  width: 12px;
+  border-bottom: \${props => props.underlined ? \\"1px solid\\" : none};
 \`;"
 `;
