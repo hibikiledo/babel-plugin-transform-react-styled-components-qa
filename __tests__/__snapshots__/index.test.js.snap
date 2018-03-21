@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`works 1`] = `
+"\\"use strict\\";
+
+/* eslint-disable */
+
+// without attrs at ( standard html tags )
+const Component = styled.div.attrs({
+  \\"data-qa\\": \\"Component\\"
+})\`
+  font-size: 12px;
+  border-bottom: \${props => props.underlined ? \\"1px solid\\" : none};
+\`;
+
+// with attrs ( standard html tags )
+const Component2 = styled.div.attrs({
+  underlined: true,
+  accentColor: \\"red\\",
+  \\"data-qa\\": \\"Component2\\"
+})\`
+  font-size: 12px;
+  border-bottom: \${props => props.underlined ? \\"1px solid\\" : none};
+\`;
+
+// without attrs ( computed tag )
+const Component5 = styled[tag].attrs({
+  \\"data-qa\\": \\"Component5\\"
+})\`
+  width: 12px;
+  border-bottom: \${props => props.underlined ? \\"1px solid\\" : none};
+\`;
+
+// with attrs ( computed tag )
+const Component6 = styled[tag].attrs({
+  underlined: true,
+  accentColor: \\"blue\\",
+  \\"data-qa\\": \\"Component6\\"
+})\`
+  width: 12px;
+  border-bottom: \${props => props.underlined ? \\"1px solid\\" : none};
+\`;"
+`;

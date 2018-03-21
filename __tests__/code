@@ -1,0 +1,31 @@
+/* eslint-disable */
+
+// without attrs at ( standard html tags )
+const Component = styled.div`
+  font-size: 12px;
+  border-bottom: ${props => (props.underlined ? "1px solid" : none)};
+`;
+
+// with attrs ( standard html tags )
+const Component2 = styled.div.attrs({
+  underlined: true,
+  accentColor: "red"
+})`
+  font-size: 12px;
+  border-bottom: ${props => (props.underlined ? "1px solid" : none)};
+`;
+
+// without attrs ( computed tag )
+const Component5 = styled[tag]`
+  width: 12px;
+  border-bottom: ${props => (props.underlined ? "1px solid" : none)};
+`;
+
+// with attrs ( computed tag )
+const Component6 = styled[tag].attrs({
+  underlined: true,
+  accentColor: "blue"
+})`
+  width: 12px;
+  border-bottom: ${props => (props.underlined ? "1px solid" : none)};
+`;
