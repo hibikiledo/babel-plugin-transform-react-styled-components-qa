@@ -61,7 +61,8 @@ const PasswordInput = styled.input.attrs({
 
 ## Usage
 
-This plugin is intended to be use in pre-production environment. Using this plugin with SSR could result in higher payload due to the extra attribute.
+This plugin is intended to be use in pre-production environment. \
+Using this plugin with SSR could result in larger payload due to the extra attribute.
 
 #### .babelrc
 ```
