@@ -1,14 +1,13 @@
 {
   "name": "babel-plugin-transform-react-styled-components-qa",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Add data-qa property to styled-components via .attrs using the component name",
   "main": "lib/index.js",
   "scripts": {
     "clean": "rm -rf lib",
     "build": "babel src -d lib",
     "test": "jest",
-    "test:watch": "jest --watch",
-    "postinstall": "babel src -d lib"
+    "test:watch": "jest --watch"
   },
   "repository": {
     "type": "git",
