@@ -1,5 +1,11 @@
 import { getAttributeName, getComponentNameFormatter } from './options'
 
+import * as babelType from '@babel/types'
+
+/**
+ *
+ * @param {{ types: typeof babelType }}
+ */
 export default function({ types: t }) {
 	return {
 		visitor: {
