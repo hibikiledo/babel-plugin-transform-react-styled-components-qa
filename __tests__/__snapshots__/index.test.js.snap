@@ -37,16 +37,14 @@ const RandomName = styled[tag].attrs({
       ↓ ↓ ↓ ↓ ↓ ↓
 
 /* eslint-disable */
-
 // without attrs at ( standard html tags )
 const AwesomeComponent = styled.div.attrs({
   \\"data-wn-qa\\": \\"awesome-component\\"
 })\`
   font-size: 12px;
   border-bottom: \${props => props.underlined ? \\"1px solid\\" : none};
-\`;
+\`; // with attrs ( standard html tags )
 
-// with attrs ( standard html tags )
 const RockyMountain = styled.div.attrs({
   underlined: true,
   accentColor: \\"red\\",
@@ -54,17 +52,15 @@ const RockyMountain = styled.div.attrs({
 })\`
   font-size: 12px;
   border-bottom: \${props => props.underlined ? \\"1px solid\\" : none};
-\`;
+\`; // without attrs ( computed tag )
 
-// without attrs ( computed tag )
 const CoverImage = styled[tag].attrs({
   \\"data-wn-qa\\": \\"cover-image\\"
 })\`
   width: 12px;
   border-bottom: \${props => props.underlined ? \\"1px solid\\" : none};
-\`;
+\`; // with attrs ( computed tag )
 
-// with attrs ( computed tag )
 const RandomName = styled[tag].attrs({
   underlined: true,
   accentColor: \\"blue\\",
@@ -113,16 +109,14 @@ const RandomName = styled[tag].attrs({
       ↓ ↓ ↓ ↓ ↓ ↓
 
 /* eslint-disable */
-
 // without attrs at ( standard html tags )
 const AwesomeComponent = styled.div.attrs({
   \\"data-qa\\": \\"awesomeComponent\\"
 })\`
   font-size: 12px;
   border-bottom: \${props => props.underlined ? \\"1px solid\\" : none};
-\`;
+\`; // with attrs ( standard html tags )
 
-// with attrs ( standard html tags )
 const RockyMountain = styled.div.attrs({
   underlined: true,
   accentColor: \\"red\\",
@@ -130,17 +124,15 @@ const RockyMountain = styled.div.attrs({
 })\`
   font-size: 12px;
   border-bottom: \${props => props.underlined ? \\"1px solid\\" : none};
-\`;
+\`; // without attrs ( computed tag )
 
-// without attrs ( computed tag )
 const CoverImage = styled[tag].attrs({
   \\"data-qa\\": \\"coverImage\\"
 })\`
   width: 12px;
   border-bottom: \${props => props.underlined ? \\"1px solid\\" : none};
-\`;
+\`; // with attrs ( computed tag )
 
-// with attrs ( computed tag )
 const RandomName = styled[tag].attrs({
   underlined: true,
   accentColor: \\"blue\\",
@@ -189,16 +181,14 @@ const RandomName = styled[tag].attrs({
       ↓ ↓ ↓ ↓ ↓ ↓
 
 /* eslint-disable */
-
 // without attrs at ( standard html tags )
 const AwesomeComponent = styled.div.attrs({
   \\"data-qa\\": \\"awesome-component\\"
 })\`
   font-size: 12px;
   border-bottom: \${props => props.underlined ? \\"1px solid\\" : none};
-\`;
+\`; // with attrs ( standard html tags )
 
-// with attrs ( standard html tags )
 const RockyMountain = styled.div.attrs({
   underlined: true,
   accentColor: \\"red\\",
@@ -206,17 +196,15 @@ const RockyMountain = styled.div.attrs({
 })\`
   font-size: 12px;
   border-bottom: \${props => props.underlined ? \\"1px solid\\" : none};
-\`;
+\`; // without attrs ( computed tag )
 
-// without attrs ( computed tag )
 const CoverImage = styled[tag].attrs({
   \\"data-qa\\": \\"cover-image\\"
 })\`
   width: 12px;
   border-bottom: \${props => props.underlined ? \\"1px solid\\" : none};
-\`;
+\`; // with attrs ( computed tag )
 
-// with attrs ( computed tag )
 const RandomName = styled[tag].attrs({
   underlined: true,
   accentColor: \\"blue\\",
@@ -265,16 +253,14 @@ const RandomName = styled[tag].attrs({
       ↓ ↓ ↓ ↓ ↓ ↓
 
 /* eslint-disable */
-
 // without attrs at ( standard html tags )
 const AwesomeComponent = styled.div.attrs({
   \\"data-qa\\": \\"awesome_component\\"
 })\`
   font-size: 12px;
   border-bottom: \${props => props.underlined ? \\"1px solid\\" : none};
-\`;
+\`; // with attrs ( standard html tags )
 
-// with attrs ( standard html tags )
 const RockyMountain = styled.div.attrs({
   underlined: true,
   accentColor: \\"red\\",
@@ -282,17 +268,15 @@ const RockyMountain = styled.div.attrs({
 })\`
   font-size: 12px;
   border-bottom: \${props => props.underlined ? \\"1px solid\\" : none};
-\`;
+\`; // without attrs ( computed tag )
 
-// without attrs ( computed tag )
 const CoverImage = styled[tag].attrs({
   \\"data-qa\\": \\"cover_image\\"
 })\`
   width: 12px;
   border-bottom: \${props => props.underlined ? \\"1px solid\\" : none};
-\`;
+\`; // with attrs ( computed tag )
 
-// with attrs ( computed tag )
 const RandomName = styled[tag].attrs({
   underlined: true,
   accentColor: \\"blue\\",
@@ -341,16 +325,14 @@ const RandomName = styled[tag].attrs({
       ↓ ↓ ↓ ↓ ↓ ↓
 
 /* eslint-disable */
-
 // without attrs at ( standard html tags )
 const AwesomeComponent = styled.div.attrs({
   \\"data-qa\\": \\"awesome-component\\"
 })\`
   font-size: 12px;
   border-bottom: \${props => props.underlined ? \\"1px solid\\" : none};
-\`;
+\`; // with attrs ( standard html tags )
 
-// with attrs ( standard html tags )
 const RockyMountain = styled.div.attrs({
   underlined: true,
   accentColor: \\"red\\",
@@ -358,17 +340,15 @@ const RockyMountain = styled.div.attrs({
 })\`
   font-size: 12px;
   border-bottom: \${props => props.underlined ? \\"1px solid\\" : none};
-\`;
+\`; // without attrs ( computed tag )
 
-// without attrs ( computed tag )
 const CoverImage = styled[tag].attrs({
   \\"data-qa\\": \\"cover-image\\"
 })\`
   width: 12px;
   border-bottom: \${props => props.underlined ? \\"1px solid\\" : none};
-\`;
+\`; // with attrs ( computed tag )
 
-// with attrs ( computed tag )
 const RandomName = styled[tag].attrs({
   underlined: true,
   accentColor: \\"blue\\",

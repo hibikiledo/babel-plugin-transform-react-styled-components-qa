@@ -1,46 +1,47 @@
 {
-  "name": "babel-plugin-transform-react-styled-components-qa",
-  "version": "1.0.3",
-  "description": "Add data-qa property to styled-components via .attrs using the component name",
-  "main": "lib/index.js",
-  "scripts": {
-    "clean": "rm -rf lib",
-    "build": "babel src -d lib",
-    "test": "jest",
-    "test:watch": "jest --watch"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/hibikiledo/babel-plugin-transform-react-styled-components-qa.git"
-  },
-  "keywords": [
-    "qa",
-    "styled-components",
-    "data-qa"
-  ],
-  "author": "Ratthanan Nalintasnai",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/hibikiledo/babel-plugin-transform-react-styled-components-qa/issues"
-  },
-  "homepage": "https://github.com/hibikiledo/babel-plugin-transform-react-styled-components-qa#readme",
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-plugin-tester": "^5.0.0",
-    "babel-preset-env": "^1.6.1",
-    "eslint": "^4.19.0",
-    "eslint-config-standard": "^11.0.0",
-    "eslint-plugin-import": "^2.9.0",
-    "eslint-plugin-jest": "^21.15.0",
-    "eslint-plugin-node": "^6.0.1",
-    "eslint-plugin-promise": "^3.7.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "jest": "^22.4.2"
-  },
-  "dependencies": {
-    "lodash.camelcase": "^4.3.0",
-    "lodash.isstring": "^4.0.1",
-    "lodash.kebabcase": "^4.1.1",
-    "lodash.snakecase": "^4.1.1"
-  }
+	"name": "babel-plugin-transform-react-styled-components-qa",
+	"version": "1.0.3",
+	"description": "Add data-qa property to styled-components via .attrs using the component name",
+	"main": "lib/index.js",
+	"scripts": {
+		"clean": "rm -rf lib",
+		"build": "babel src -d lib",
+		"test": "jest",
+		"test:watch": "jest --watch"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/hibikiledo/babel-plugin-transform-react-styled-components-qa.git"
+	},
+	"keywords": [
+		"qa",
+		"styled-components",
+		"data-qa"
+	],
+	"author": "Ratthanan Nalintasnai",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/hibikiledo/babel-plugin-transform-react-styled-components-qa/issues"
+	},
+	"homepage": "https://github.com/hibikiledo/babel-plugin-transform-react-styled-components-qa#readme",
+	"devDependencies": {
+		"@babel/cli": "7.6.2",
+		"@babel/core": "7.6.2",
+		"babel-preset-env": "7.0.0-beta.3",
+		"babel-plugin-tester": "7.0.1",
+		"eslint": "^4.19.0",
+		"eslint-config-standard": "^11.0.0",
+		"eslint-plugin-import": "^2.9.0",
+		"eslint-plugin-jest": "^21.15.0",
+		"eslint-plugin-node": "^6.0.1",
+		"eslint-plugin-promise": "^3.7.0",
+		"eslint-plugin-standard": "^3.0.1",
+		"jest": "25.0.0"
+	},
+	"dependencies": {
+		"lodash.camelcase": "^4.3.0",
+		"lodash.isstring": "^4.0.1",
+		"lodash.kebabcase": "^4.1.1",
+		"lodash.snakecase": "^4.1.1"
+	}
 }
