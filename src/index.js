@@ -32,12 +32,27 @@ export default function({ types: t }) {
 								t.identifier('attrs'),
 							),
 							[
-								t.objectExpression([
-									t.objectProperty(
-										t.stringLiteral(attributeName),
-										t.stringLiteral(format(path.node.id.name)),
-									),
-								]),
+								t.arrowFunctionExpression(
+									[t.identifier('props')],
+									t.blockStatement([
+										t.returnStatement(
+											t.objectExpression([
+												t.objectProperty(
+													t.stringLiteral(attributeName),
+													t.logicalExpression(
+														'||',
+														t.memberExpression(
+															t.identifier('props'),
+															t.stringLiteral('data-qa'),
+															true,
+														),
+														t.stringLiteral(format(path.node.id.name)),
+													),
+												),
+											]),
+										),
+									]),
+								),
 							],
 						)
 					}
@@ -53,13 +68,28 @@ export default function({ types: t }) {
 						tag.callee.object.object.name === 'styled'
 					) {
 						tag.arguments = [
-							t.objectExpression(
-								tag.arguments[0].properties.concat(
-									t.objectProperty(
-										t.stringLiteral(attributeName),
-										t.stringLiteral(format(path.node.id.name)),
+							t.arrowFunctionExpression(
+								[t.identifier('props')],
+								t.blockStatement([
+									t.returnStatement(
+										t.objectExpression(
+											tag.arguments[0].properties.concat(
+												t.objectProperty(
+													t.stringLiteral(attributeName),
+													t.logicalExpression(
+														'||',
+														t.memberExpression(
+															t.identifier('props'),
+															t.stringLiteral('data-qa'),
+															true,
+														),
+														t.stringLiteral(format(path.node.id.name)),
+													),
+												),
+											),
+										),
 									),
-								),
+								]),
 							),
 						]
 					}

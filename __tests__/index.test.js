@@ -15,10 +15,10 @@ const common = {
 	],
 }
 
-// pluginTester({
-// 	...common,
-// 	title: 'without plugin options',
-// })
+pluginTester({
+	...common,
+	title: 'without plugin options',
+})
 
 pluginTester({
 	...common,
@@ -28,26 +28,26 @@ pluginTester({
 	},
 })
 
-// pluginTester({
-// 	...common,
-// 	title: 'format camel',
-// 	pluginOptions: {
-// 		format: 'camel',
-// 	},
-// })
+pluginTester({
+	...common,
+	title: 'format camel',
+	pluginOptions: {
+		format: 'camel',
+	},
+})
 
-// pluginTester({
-// 	...common,
-// 	title: 'format snake',
-// 	pluginOptions: {
-// 		format: 'snake',
-// 	},
-// })
+pluginTester({
+	...common,
+	title: 'format snake',
+	pluginOptions: {
+		format: 'snake',
+	},
+})
 
-// pluginTester({
-// 	...common,
-// 	title: 'custom attrubute',
-// 	pluginOptions: {
-// 		attribute: 'data-wn-qa',
-// 	},
-// })
+pluginTester({
+	...common,
+	title: 'custom attrubute',
+	pluginOptions: {
+		attribute: 'data-wn-qa',
+	},
+})

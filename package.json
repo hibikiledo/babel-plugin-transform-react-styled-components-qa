@@ -25,8 +25,8 @@
 	},
 	"homepage": "https://github.com/hibikiledo/babel-plugin-transform-react-styled-components-qa#readme",
 	"devDependencies": {
-		"@babel/cli": "7.6.2",
-		"@babel/core": "7.6.2",
+		"@babel/cli": "7.6.4",
+		"@babel/core": "7.6.4",
 		"@babel/types": "^7.6.3",
 		"babel-plugin-tester": "7.0.1",
 		"babel-preset-env": "7.0.0-beta.3",
