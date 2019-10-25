@@ -40,7 +40,7 @@ const RandomName = styled[tag].attrs({
 // without attrs at ( standard html tags )
 const AwesomeComponent = styled.div.attrs(props => {
   return {
-    \\"data-wn-qa\\": props[\\"data-qa\\"] || \\"awesome-component\\"
+    \\"data-wn-qa\\": props[\\"data-wn-qa\\"] || \\"awesome-component\\"
   };
 })\`
 	font-size: 12px;
@@ -51,7 +51,7 @@ const RockyMountain = styled.div.attrs(props => {
   return {
     underlined: true,
     accentColor: 'red',
-    \\"data-wn-qa\\": props[\\"data-qa\\"] || \\"rocky-mountain\\"
+    \\"data-wn-qa\\": props[\\"data-wn-qa\\"] || \\"rocky-mountain\\"
   };
 })\`
 	font-size: 12px;
@@ -60,7 +60,7 @@ const RockyMountain = styled.div.attrs(props => {
 
 const CoverImage = styled[tag].attrs(props => {
   return {
-    \\"data-wn-qa\\": props[\\"data-qa\\"] || \\"cover-image\\"
+    \\"data-wn-qa\\": props[\\"data-wn-qa\\"] || \\"cover-image\\"
   };
 })\`
 	width: 12px;
@@ -71,7 +71,7 @@ const RandomName = styled[tag].attrs(props => {
   return {
     underlined: true,
     accentColor: 'blue',
-    \\"data-wn-qa\\": props[\\"data-qa\\"] || \\"random-name\\"
+    \\"data-wn-qa\\": props[\\"data-wn-qa\\"] || \\"random-name\\"
   };
 })\`
 	width: 12px;
