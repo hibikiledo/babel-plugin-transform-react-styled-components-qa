@@ -43,7 +43,7 @@ export default function({ types: t }) {
 														'||',
 														t.memberExpression(
 															t.identifier('props'),
-															t.stringLiteral('data-qa'),
+															t.stringLiteral(attributeName),
 															true,
 														),
 														t.stringLiteral(format(path.node.id.name)),
@@ -80,7 +80,7 @@ export default function({ types: t }) {
 														'||',
 														t.memberExpression(
 															t.identifier('props'),
-															t.stringLiteral('data-qa'),
+															t.stringLiteral(attributeName),
 															true,
 														),
 														t.stringLiteral(format(path.node.id.name)),
