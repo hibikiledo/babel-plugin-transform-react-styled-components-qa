@@ -5,49 +5,49 @@ import path from 'path'
 import plugin from '../src/index'
 
 const common = {
-  plugin,
-  pluginName: 'babel-plugin-transform-react-styled-components-qa',
-  tests: [
-    {
-      fixture: path.join(__dirname, '__fixtures__', 'code'),
-      snapshot: true
-    }
-  ]
+	plugin,
+	pluginName: 'babel-plugin-transform-react-styled-components-qa',
+	tests: [
+		{
+			fixture: path.join(__dirname, '__fixtures__', 'code'),
+			snapshot: true,
+		},
+	],
 }
 
 pluginTester({
-  ...common,
-  title: 'without plugin options'
+	...common,
+	title: 'without plugin options',
 })
 
 pluginTester({
-  ...common,
-  title: 'format kebab',
-  pluginOptions: {
-    format: 'kebab'
-  }
+	...common,
+	title: 'format kebab',
+	pluginOptions: {
+		format: 'kebab',
+	},
 })
 
 pluginTester({
-  ...common,
-  title: 'format camel',
-  pluginOptions: {
-    format: 'camel'
-  }
+	...common,
+	title: 'format camel',
+	pluginOptions: {
+		format: 'camel',
+	},
 })
 
 pluginTester({
-  ...common,
-  title: 'format snake',
-  pluginOptions: {
-    format: 'snake'
-  }
+	...common,
+	title: 'format snake',
+	pluginOptions: {
+		format: 'snake',
+	},
 })
 
 pluginTester({
-  ...common,
-  title: 'custom attrubute',
-  pluginOptions: {
-    attribute: 'data-wn-qa'
-  }
+	...common,
+	title: 'custom attrubute',
+	pluginOptions: {
+		attribute: 'data-wn-qa',
+	},
 })
