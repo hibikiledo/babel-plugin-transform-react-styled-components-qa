@@ -70,7 +70,7 @@ Using this plugin with SSR could result in larger payload due to the extra attri
     "env": {
         "dev": {
             plugins: [
-                ["babel-transform-react-styled-components-qa", {
+                ["transform-react-styled-components-qa", {
                     "attribute": "data-qa",
                     "format": "kebab"
                 }]
