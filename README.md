@@ -84,5 +84,5 @@ Using this plugin with SSR could result in larger payload due to the extra attri
 #### attribute : (string)
 The attribute name to be used instead of `data-qa`.
 #### format : (string)
-**Support values:** `kebab`, `camel`, `snake` \
+**Support values:** `kebab`, `camel`, `snake`, `pascal` \
 **Default value:** `kebab`
