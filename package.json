@@ -1,6 +1,6 @@
 {
 	"name": "babel-plugin-transform-react-styled-components-qa",
-	"version": "1.0.3",
+	"version": "2.0.1",
 	"description": "Add data-qa property to styled-components via .attrs using the component name",
 	"main": "lib/index.js",
 	"scripts": {
@@ -43,6 +43,7 @@
 		"lodash.camelcase": "^4.3.0",
 		"lodash.isstring": "^4.0.1",
 		"lodash.kebabcase": "^4.1.1",
-		"lodash.snakecase": "^4.1.1"
+		"lodash.snakecase": "^4.1.1",
+		"lodash.upperfirst": "4.3.1"
 	}
 }

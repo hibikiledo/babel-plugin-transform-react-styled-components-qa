@@ -240,6 +240,86 @@ const RandomName = styled[tag].attrs(props => {
 "
 `;
 
+exports[`format pascal 1. babel-plugin-transform-react-styled-components-qa: 1. babel-plugin-transform-react-styled-components-qa 1`] = `
+"
+/* eslint-disable */
+
+// without attrs at ( standard html tags )
+const AwesomeComponent = styled.div\`
+	font-size: 12px;
+	border-bottom: \${props => (props.underlined ? '1px solid' : none)};
+\`
+
+// with attrs ( standard html tags )
+const RockyMountain = styled.div.attrs({
+	underlined: true,
+	accentColor: 'red',
+})\`
+	font-size: 12px;
+	border-bottom: \${props => (props.underlined ? '1px solid' : none)};
+\`
+
+// without attrs ( computed tag )
+const CoverImage = styled[tag]\`
+	width: 12px;
+	border-bottom: \${props => (props.underlined ? '1px solid' : none)};
+\`
+
+// with attrs ( computed tag )
+const RandomName = styled[tag].attrs({
+	underlined: true,
+	accentColor: 'blue',
+})\`
+	width: 12px;
+	border-bottom: \${props => (props.underlined ? '1px solid' : none)};
+\`
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+/* eslint-disable */
+// without attrs at ( standard html tags )
+const AwesomeComponent = styled.div.attrs(props => {
+  return {
+    \\"data-qa\\": props[\\"data-qa\\"] || \\"AwesomeComponent\\"
+  };
+})\`
+	font-size: 12px;
+	border-bottom: \${props => props.underlined ? '1px solid' : none};
+\`; // with attrs ( standard html tags )
+
+const RockyMountain = styled.div.attrs(props => {
+  return {
+    underlined: true,
+    accentColor: 'red',
+    \\"data-qa\\": props[\\"data-qa\\"] || \\"RockyMountain\\"
+  };
+})\`
+	font-size: 12px;
+	border-bottom: \${props => props.underlined ? '1px solid' : none};
+\`; // without attrs ( computed tag )
+
+const CoverImage = styled[tag].attrs(props => {
+  return {
+    \\"data-qa\\": props[\\"data-qa\\"] || \\"CoverImage\\"
+  };
+})\`
+	width: 12px;
+	border-bottom: \${props => props.underlined ? '1px solid' : none};
+\`; // with attrs ( computed tag )
+
+const RandomName = styled[tag].attrs(props => {
+  return {
+    underlined: true,
+    accentColor: 'blue',
+    \\"data-qa\\": props[\\"data-qa\\"] || \\"RandomName\\"
+  };
+})\`
+	width: 12px;
+	border-bottom: \${props => props.underlined ? '1px solid' : none};
+\`;
+"
+`;
+
 exports[`format snake 1. babel-plugin-transform-react-styled-components-qa: 1. babel-plugin-transform-react-styled-components-qa 1`] = `
 "
 /* eslint-disable */

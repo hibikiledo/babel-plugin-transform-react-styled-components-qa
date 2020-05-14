@@ -46,6 +46,14 @@ pluginTester({
 
 pluginTester({
 	...common,
+	title: 'format pascal',
+	pluginOptions: {
+		format: 'pascal',
+	},
+})
+
+pluginTester({
+	...common,
 	title: 'custom attrubute',
 	pluginOptions: {
 		attribute: 'data-wn-qa',

@@ -70,7 +70,7 @@ Using this plugin with SSR could result in larger payload due to the extra attri
     "env": {
         "dev": {
             plugins: [
-                ["babel-transform-react-styled-components-qa", {
+                ["transform-react-styled-components-qa", {
                     "attribute": "data-qa",
                     "format": "kebab"
                 }]
@@ -84,5 +84,5 @@ Using this plugin with SSR could result in larger payload due to the extra attri
 #### attribute : (string)
 The attribute name to be used instead of `data-qa`.
 #### format : (string)
-**Support values:** `kebab`, `camel`, `snake` \
+**Support values:** `kebab`, `camel`, `snake`, `pascal` \
 **Default value:** `kebab`
