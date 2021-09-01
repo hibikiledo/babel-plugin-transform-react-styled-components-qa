@@ -70,11 +70,30 @@ export default function({ types: t }) {
 						const argument = tag.arguments[0]
 						const newProperty = t.objectProperty(
 							t.stringLiteral(attributeName),
-							t.stringLiteral(format(path.node.id.name))
+							t.logicalExpression(
+								'||',
+								t.memberExpression(
+									t.identifier('props'),
+									t.stringLiteral(attributeName),
+									true,
+								),
+								t.stringLiteral(format(path.node.id.name)),
+							),
 						)
 						switch (true) {
 							case t.isObjectExpression(argument): {
-								argument.properties.push(newProperty)
+								tag.arguments = [
+									t.arrowFunctionExpression(
+										[t.identifier('props')],
+										t.blockStatement([
+											t.returnStatement(
+												t.objectExpression(
+													tag.arguments[0].properties.concat(newProperty),
+												),
+											),
+										]),
+									),
+								]
 								break
 							}
 							case t.isArrowFunctionExpression(argument):

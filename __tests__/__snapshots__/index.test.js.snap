@@ -34,6 +34,26 @@ const RandomName = styled[tag].attrs({
 	border-bottom: \${props => (props.underlined ? '1px solid' : none)};
 \`
 
+// with dynamic attrs ( standard html tags )
+const DynamicAttrsObject = styled.div.attrs(props => ({
+	underlined: props.underlined,
+	accentColor: 'red',
+}))\`
+	font-size: 12px;
+	border-bottom: \${props => (props.underlined ? '1px solid' : none)};
+\`
+
+// with dynamic attrs ( standard html tags )
+const DynamicAttrsBlock = styled.div.attrs(props => {
+    return {
+        underlined: props.underlined,
+        accentColor: 'red',
+    }
+})\`
+	font-size: 12px;
+	border-bottom: \${props => (props.underlined ? '1px solid' : none)};
+\`
+
       ↓ ↓ ↓ ↓ ↓ ↓
 
 /* eslint-disable */
@@ -76,6 +96,26 @@ const RandomName = styled[tag].attrs(props => {
 })\`
 	width: 12px;
 	border-bottom: \${props => props.underlined ? '1px solid' : none};
+\`; // with dynamic attrs ( standard html tags )
+
+const DynamicAttrsObject = styled.div.attrs(props => ({
+  underlined: props.underlined,
+  accentColor: 'red',
+  \\"data-wn-qa\\": props[\\"data-wn-qa\\"] || \\"dynamic-attrs-object\\"
+}))\`
+	font-size: 12px;
+	border-bottom: \${props => props.underlined ? '1px solid' : none};
+\`; // with dynamic attrs ( standard html tags )
+
+const DynamicAttrsBlock = styled.div.attrs(props => {
+  return {
+    underlined: props.underlined,
+    accentColor: 'red',
+    \\"data-wn-qa\\": props[\\"data-wn-qa\\"] || \\"dynamic-attrs-block\\"
+  };
+})\`
+	font-size: 12px;
+	border-bottom: \${props => props.underlined ? '1px solid' : none};
 \`;
 "
 `;
@@ -111,6 +151,26 @@ const RandomName = styled[tag].attrs({
 	accentColor: 'blue',
 })\`
 	width: 12px;
+	border-bottom: \${props => (props.underlined ? '1px solid' : none)};
+\`
+
+// with dynamic attrs ( standard html tags )
+const DynamicAttrsObject = styled.div.attrs(props => ({
+	underlined: props.underlined,
+	accentColor: 'red',
+}))\`
+	font-size: 12px;
+	border-bottom: \${props => (props.underlined ? '1px solid' : none)};
+\`
+
+// with dynamic attrs ( standard html tags )
+const DynamicAttrsBlock = styled.div.attrs(props => {
+    return {
+        underlined: props.underlined,
+        accentColor: 'red',
+    }
+})\`
+	font-size: 12px;
 	border-bottom: \${props => (props.underlined ? '1px solid' : none)};
 \`
 
@@ -156,6 +216,26 @@ const RandomName = styled[tag].attrs(props => {
 })\`
 	width: 12px;
 	border-bottom: \${props => props.underlined ? '1px solid' : none};
+\`; // with dynamic attrs ( standard html tags )
+
+const DynamicAttrsObject = styled.div.attrs(props => ({
+  underlined: props.underlined,
+  accentColor: 'red',
+  \\"data-qa\\": props[\\"data-qa\\"] || \\"dynamicAttrsObject\\"
+}))\`
+	font-size: 12px;
+	border-bottom: \${props => props.underlined ? '1px solid' : none};
+\`; // with dynamic attrs ( standard html tags )
+
+const DynamicAttrsBlock = styled.div.attrs(props => {
+  return {
+    underlined: props.underlined,
+    accentColor: 'red',
+    \\"data-qa\\": props[\\"data-qa\\"] || \\"dynamicAttrsBlock\\"
+  };
+})\`
+	font-size: 12px;
+	border-bottom: \${props => props.underlined ? '1px solid' : none};
 \`;
 "
 `;
@@ -191,6 +271,26 @@ const RandomName = styled[tag].attrs({
 	accentColor: 'blue',
 })\`
 	width: 12px;
+	border-bottom: \${props => (props.underlined ? '1px solid' : none)};
+\`
+
+// with dynamic attrs ( standard html tags )
+const DynamicAttrsObject = styled.div.attrs(props => ({
+	underlined: props.underlined,
+	accentColor: 'red',
+}))\`
+	font-size: 12px;
+	border-bottom: \${props => (props.underlined ? '1px solid' : none)};
+\`
+
+// with dynamic attrs ( standard html tags )
+const DynamicAttrsBlock = styled.div.attrs(props => {
+    return {
+        underlined: props.underlined,
+        accentColor: 'red',
+    }
+})\`
+	font-size: 12px;
 	border-bottom: \${props => (props.underlined ? '1px solid' : none)};
 \`
 
@@ -236,6 +336,26 @@ const RandomName = styled[tag].attrs(props => {
 })\`
 	width: 12px;
 	border-bottom: \${props => props.underlined ? '1px solid' : none};
+\`; // with dynamic attrs ( standard html tags )
+
+const DynamicAttrsObject = styled.div.attrs(props => ({
+  underlined: props.underlined,
+  accentColor: 'red',
+  \\"data-qa\\": props[\\"data-qa\\"] || \\"dynamic-attrs-object\\"
+}))\`
+	font-size: 12px;
+	border-bottom: \${props => props.underlined ? '1px solid' : none};
+\`; // with dynamic attrs ( standard html tags )
+
+const DynamicAttrsBlock = styled.div.attrs(props => {
+  return {
+    underlined: props.underlined,
+    accentColor: 'red',
+    \\"data-qa\\": props[\\"data-qa\\"] || \\"dynamic-attrs-block\\"
+  };
+})\`
+	font-size: 12px;
+	border-bottom: \${props => props.underlined ? '1px solid' : none};
 \`;
 "
 `;
@@ -271,6 +391,26 @@ const RandomName = styled[tag].attrs({
 	accentColor: 'blue',
 })\`
 	width: 12px;
+	border-bottom: \${props => (props.underlined ? '1px solid' : none)};
+\`
+
+// with dynamic attrs ( standard html tags )
+const DynamicAttrsObject = styled.div.attrs(props => ({
+	underlined: props.underlined,
+	accentColor: 'red',
+}))\`
+	font-size: 12px;
+	border-bottom: \${props => (props.underlined ? '1px solid' : none)};
+\`
+
+// with dynamic attrs ( standard html tags )
+const DynamicAttrsBlock = styled.div.attrs(props => {
+    return {
+        underlined: props.underlined,
+        accentColor: 'red',
+    }
+})\`
+	font-size: 12px;
 	border-bottom: \${props => (props.underlined ? '1px solid' : none)};
 \`
 
@@ -316,6 +456,26 @@ const RandomName = styled[tag].attrs(props => {
 })\`
 	width: 12px;
 	border-bottom: \${props => props.underlined ? '1px solid' : none};
+\`; // with dynamic attrs ( standard html tags )
+
+const DynamicAttrsObject = styled.div.attrs(props => ({
+  underlined: props.underlined,
+  accentColor: 'red',
+  \\"data-qa\\": props[\\"data-qa\\"] || \\"DynamicAttrsObject\\"
+}))\`
+	font-size: 12px;
+	border-bottom: \${props => props.underlined ? '1px solid' : none};
+\`; // with dynamic attrs ( standard html tags )
+
+const DynamicAttrsBlock = styled.div.attrs(props => {
+  return {
+    underlined: props.underlined,
+    accentColor: 'red',
+    \\"data-qa\\": props[\\"data-qa\\"] || \\"DynamicAttrsBlock\\"
+  };
+})\`
+	font-size: 12px;
+	border-bottom: \${props => props.underlined ? '1px solid' : none};
 \`;
 "
 `;
@@ -351,6 +511,26 @@ const RandomName = styled[tag].attrs({
 	accentColor: 'blue',
 })\`
 	width: 12px;
+	border-bottom: \${props => (props.underlined ? '1px solid' : none)};
+\`
+
+// with dynamic attrs ( standard html tags )
+const DynamicAttrsObject = styled.div.attrs(props => ({
+	underlined: props.underlined,
+	accentColor: 'red',
+}))\`
+	font-size: 12px;
+	border-bottom: \${props => (props.underlined ? '1px solid' : none)};
+\`
+
+// with dynamic attrs ( standard html tags )
+const DynamicAttrsBlock = styled.div.attrs(props => {
+    return {
+        underlined: props.underlined,
+        accentColor: 'red',
+    }
+})\`
+	font-size: 12px;
 	border-bottom: \${props => (props.underlined ? '1px solid' : none)};
 \`
 
@@ -396,6 +576,26 @@ const RandomName = styled[tag].attrs(props => {
 })\`
 	width: 12px;
 	border-bottom: \${props => props.underlined ? '1px solid' : none};
+\`; // with dynamic attrs ( standard html tags )
+
+const DynamicAttrsObject = styled.div.attrs(props => ({
+  underlined: props.underlined,
+  accentColor: 'red',
+  \\"data-qa\\": props[\\"data-qa\\"] || \\"dynamic_attrs_object\\"
+}))\`
+	font-size: 12px;
+	border-bottom: \${props => props.underlined ? '1px solid' : none};
+\`; // with dynamic attrs ( standard html tags )
+
+const DynamicAttrsBlock = styled.div.attrs(props => {
+  return {
+    underlined: props.underlined,
+    accentColor: 'red',
+    \\"data-qa\\": props[\\"data-qa\\"] || \\"dynamic_attrs_block\\"
+  };
+})\`
+	font-size: 12px;
+	border-bottom: \${props => props.underlined ? '1px solid' : none};
 \`;
 "
 `;
@@ -431,6 +631,26 @@ const RandomName = styled[tag].attrs({
 	accentColor: 'blue',
 })\`
 	width: 12px;
+	border-bottom: \${props => (props.underlined ? '1px solid' : none)};
+\`
+
+// with dynamic attrs ( standard html tags )
+const DynamicAttrsObject = styled.div.attrs(props => ({
+	underlined: props.underlined,
+	accentColor: 'red',
+}))\`
+	font-size: 12px;
+	border-bottom: \${props => (props.underlined ? '1px solid' : none)};
+\`
+
+// with dynamic attrs ( standard html tags )
+const DynamicAttrsBlock = styled.div.attrs(props => {
+    return {
+        underlined: props.underlined,
+        accentColor: 'red',
+    }
+})\`
+	font-size: 12px;
 	border-bottom: \${props => (props.underlined ? '1px solid' : none)};
 \`
 
@@ -475,6 +695,26 @@ const RandomName = styled[tag].attrs(props => {
   };
 })\`
 	width: 12px;
+	border-bottom: \${props => props.underlined ? '1px solid' : none};
+\`; // with dynamic attrs ( standard html tags )
+
+const DynamicAttrsObject = styled.div.attrs(props => ({
+  underlined: props.underlined,
+  accentColor: 'red',
+  \\"data-qa\\": props[\\"data-qa\\"] || \\"dynamic-attrs-object\\"
+}))\`
+	font-size: 12px;
+	border-bottom: \${props => props.underlined ? '1px solid' : none};
+\`; // with dynamic attrs ( standard html tags )
+
+const DynamicAttrsBlock = styled.div.attrs(props => {
+  return {
+    underlined: props.underlined,
+    accentColor: 'red',
+    \\"data-qa\\": props[\\"data-qa\\"] || \\"dynamic-attrs-block\\"
+  };
+})\`
+	font-size: 12px;
 	border-bottom: \${props => props.underlined ? '1px solid' : none};
 \`;
 "
