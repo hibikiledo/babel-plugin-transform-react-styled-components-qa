@@ -58,7 +58,7 @@ export default function({ types: t }) {
 					}
 				}
 				if (t.isCallExpression(tag)) {
-					// styled.div.attrs({}) or styled[tag].attrs({})
+					// styled.div.attrs({}), styled.div.attrs(props => ({})), styled[tag].attrs({})
 					if (
 						t.isMemberExpression(tag.callee) &&
 						t.isIdentifier(tag.callee.property) &&
@@ -67,31 +67,53 @@ export default function({ types: t }) {
 						t.isIdentifier(tag.callee.object.object) &&
 						tag.callee.object.object.name === 'styled'
 					) {
-						tag.arguments = [
-							t.arrowFunctionExpression(
-								[t.identifier('props')],
-								t.blockStatement([
-									t.returnStatement(
-										t.objectExpression(
-											tag.arguments[0].properties.concat(
-												t.objectProperty(
-													t.stringLiteral(attributeName),
-													t.logicalExpression(
-														'||',
-														t.memberExpression(
-															t.identifier('props'),
-															t.stringLiteral(attributeName),
-															true,
-														),
-														t.stringLiteral(format(path.node.id.name)),
-													),
+						const argument = tag.arguments[0]
+						const newProperty = t.objectProperty(
+							t.stringLiteral(attributeName),
+							t.logicalExpression(
+								'||',
+								t.memberExpression(
+									t.identifier('props'),
+									t.stringLiteral(attributeName),
+									true,
+								),
+								t.stringLiteral(format(path.node.id.name)),
+							),
+						)
+						switch (true) {
+							case t.isObjectExpression(argument): {
+								tag.arguments = [
+									t.arrowFunctionExpression(
+										[t.identifier('props')],
+										t.blockStatement([
+											t.returnStatement(
+												t.objectExpression(
+													tag.arguments[0].properties.concat(newProperty),
 												),
 											),
-										),
+										]),
 									),
-								]),
-							),
-						]
+								]
+								break
+							}
+							case t.isArrowFunctionExpression(argument):
+							case t.isFunctionExpression(argument): {
+								const { body } = argument
+								switch (true) {
+									case t.isBlockStatement(body): {
+										const ret = body.body.find((path) => t.isReturnStatement(path))
+										if (ret) {
+											ret.argument.properties.push(newProperty)
+										}
+										break
+									}
+									case t.isObjectExpression(body): {
+										body.properties.push(newProperty)
+										break
+									}
+								}
+							}
+						}
 					}
 				}
 			},

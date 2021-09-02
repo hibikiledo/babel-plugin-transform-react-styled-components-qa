@@ -29,3 +29,23 @@ const RandomName = styled[tag].attrs({
 	width: 12px;
 	border-bottom: ${props => (props.underlined ? '1px solid' : none)};
 `
+
+// with dynamic attrs ( standard html tags )
+const DynamicAttrsObject = styled.div.attrs(props => ({
+	underlined: props.underlined,
+	accentColor: 'red',
+}))`
+	font-size: 12px;
+	border-bottom: ${props => (props.underlined ? '1px solid' : none)};
+`
+
+// with dynamic attrs ( standard html tags )
+const DynamicAttrsBlock = styled.div.attrs(props => {
+    return {
+        underlined: props.underlined,
+        accentColor: 'red',
+    }
+})`
+	font-size: 12px;
+	border-bottom: ${props => (props.underlined ? '1px solid' : none)};
+`
